@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     botao.textContent = modoAtivo ? "☀️ Modo Claro" : "🌙 Modo Escuro";
   }
 
-  // Animação de entrada para elementos com .timeline-item
+  // Observador para animações de entrada
   const observador = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -32,6 +32,20 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".timeline-item").forEach(item => {
     observador.observe(item);
   });
+
+  // Ativa envio de mensagem se existir botão
+  const btnEnviar = document.getElementById("btnEnviar");
+  if (btnEnviar) {
+    btnEnviar.addEventListener("click", enviarMensagem);
+  }
+
+  // Ativa seletor de idioma se existir
+  const idiomaSelect = document.querySelector(".idioma-select");
+  if (idiomaSelect) {
+    idiomaSelect.addEventListener("change", () => {
+      traduzirPagina(idiomaSelect.value);
+    });
+  }
 });
 
 // Alternar modo escuro
@@ -96,6 +110,6 @@ function enviarMensagem() {
 function traduzirPagina(idiomaDestino) {
   if (!idiomaDestino) return;
   const idiomaOrigem = 'pt';
-  const url = `https://translate.google.com/translate?hl=${idiomaDestino}&sl=${idiomaOrigem}&tl=${idiomaDestino}&u=${window.location.href}`;
+  const url = `https://translate.google.com/translate?hl=${idiomaDestino}&sl=${idiomaOrigem}&tl=${idiomaDestino}&u=${encodeURIComponent(window.location.href)}`;
   window.location.href = url;
 }
