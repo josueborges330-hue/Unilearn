@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comunidade - UniLearn</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+     <nav>
+  <h2>UniLearn</h2>
+  <div>
+    <a href="index.html">Início</a>
+    <a href="universidades.html">Universidades</a>
+    <a href="aprendizagem.html">Aprendizagem</a>
+    <a href="comunidade.html">Comunidade</a>
+    <a href="sobre.html">Sobre</a>
+    <button id="modoToggle" onclick="toggleDarkMode()" class="dark-toggle">🌙 Modo Escuro</button>
+  </div>
+</nav>
+
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Comunidade Estudantil</h1>
+    <p>Partilha experiências, dúvidas e ideias com outros estudantes.</p>
+  </section>
+
+  <section class="cards" style="flex-direction: column; align-items: center;">
+    <div class="chat-box" id="chatContainer">
+      <!-- Mensagens aparecem aqui -->
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="mensagemInput" placeholder="Escreve tua mensagem..." />
+      <button onclick="enviarMensagem()">Enviar</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 UniLearn. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

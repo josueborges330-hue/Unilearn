@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Universidades - UniLearn</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+  <h2>UniLearn</h2>
+  <div>
+    <a href="index.html">Início</a>
+    <a href="universidades.html">Universidades</a>
+    <a href="aprendizagem.html">Aprendizagem</a>
+    <a href="comunidade.html">Comunidade</a>
+    <a href="sobre.html">Sobre</a>
+    <button id="modoToggle" onclick="toggleDarkMode()" class="dark-toggle">🌙 Modo Escuro</button>
+  </div>
+</nav>
+
+  </header>
+
+  <section class="hero">
+    <h1>Universidades por Distrito</h1>
+    <p>Seleciona um distrito para ver as universidades disponíveis.</p>
+  </section>
+
+  <section class="cards">
+    <button class="card" onclick="mostrarUniversidades('Lisboa')">Lisboa</button>
+    <button class="card" onclick="mostrarUniversidades('Porto')">Porto</button>
+    <button class="card" onclick="mostrarUniversidades('Coimbra')">Coimbra</button>
+  </section>
+
+  <section class="cards" id="painel-universidades">
+    <!-- Conteúdo dinâmico -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 UniLearn. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

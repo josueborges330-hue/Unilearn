@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UniLearn</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h2 style="display: flex; align-items: center; gap: 0.5rem;">
+        UniLearn
+        <select class="idioma-select" onchange="traduzirPagina(this.value)">
+          <option value="">🌐</option>
+          <option value="en">EN</option>
+          <option value="es">ES</option>
+        </select>
+      </h2>
+      <div>
+        <a href="index.html">Início</a>
+        <a href="universidades.html">Universidades</a>
+        <a href="aprendizagem.html">Aprendizagem</a>
+        <a href="comunidade.html">Comunidade</a>
+        <a href="sobre.html">Sobre</a>
+        <button id="modoToggle" onclick="toggleDarkMode()" class="dark-toggle">🌙 Modo Escuro</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Conectando estudantes e universidades</h1>
+    <p>Descobre oportunidades académicas em Portugal com UniLearn.</p>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <h3>Explora Universidades</h3>
+      <p>Descobre instituições por distrito e conhece os cursos disponíveis.</p>
+    </div>
+    <div class="card">
+      <h3>Recursos de Estudo</h3>
+      <p>Aprofunda os teus conhecimentos com materiais organizados por tema.</p>
+    </div>
+    <div class="card">
+      <h3>Comunidade Estudantil</h3>
+      <p>Partilha experiências e dúvidas com outros alunos.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 UniLearn. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

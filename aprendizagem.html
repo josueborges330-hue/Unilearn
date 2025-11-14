@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interesses - UniLearn</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h2>UniLearn</h2>
+      <div>
+        <a href="index.html">Início</a>
+        <a href="universidades.html">Universidades</a>
+        <a href="aprendizagem.html" class="ativo">Interesses</a>
+        <a href="comunidade.html">Comunidade</a>
+        <a href="sobre.html">Sobre</a>
+        <button id="modoToggle" onclick="toggleDarkMode()" class="dark-toggle">🌙 Modo Escuro</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Interesses Estudantis</h1>
+    <p>Explora oportunidades e temas que vão além da sala de aula e conectam estudantes de todo o país.</p>
+  </section>
+
+  <section class="cards filtro">
+    <button onclick="filtrarInteresses('todos')">Todos</button>
+    <button onclick="filtrarInteresses('intercambio')">Intercâmbio</button>
+    <button onclick="filtrarInteresses('bolsas')">Bolsas</button>
+    <button onclick="filtrarInteresses('saude')">Saúde Mental</button>
+    <button onclick="filtrarInteresses('voluntariado')">Voluntariado</button>
+    <button onclick="filtrarInteresses('empreendedorismo')">Empreendedorismo</button>
+  </section>
+
+  <section class="cards" id="interesses">
+    <div class="card intercambio">
+      <h3>Estudar fora com Erasmus</h3>
+      <p>Descobre como te candidatar a programas de mobilidade internacional e viver novas experiências.</p>
+    </div>
+    <div class="card bolsas">
+      <h3>Bolsas de Estudo</h3>
+      <p>Consulta os apoios disponíveis para estudantes em Portugal e como fazer a candidatura.</p>
+    </div>
+    <div class="card saude">
+      <h3>Saúde Mental</h3>
+      <p>Recursos de apoio psicológico, apps úteis e grupos de suporte para estudantes.</p>
+    </div>
+    <div class="card voluntariado">
+      <h3>Voluntariado Académico</h3>
+      <p>Participa em projetos sociais e desenvolve competências enquanto contribuis para a comunidade.</p>
+    </div>
+    <div class="card empreendedorismo">
+      <h3>Empreendedorismo Estudantil</h3>
+      <p>Explora iniciativas, concursos e incubadoras para transformar ideias em projetos reais.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 UniLearn. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
