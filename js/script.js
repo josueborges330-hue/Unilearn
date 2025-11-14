@@ -106,10 +106,10 @@ function enviarMensagem() {
   }
 }
 
-// 🌐 Tradução automática da página
+// 🌐 Tradução automática da página (corrigida)
 function traduzirPagina(idiomaDestino) {
   if (!idiomaDestino) return;
-  const idiomaOrigem = 'pt';
-  const url = `https://translate.google.com/translate?hl=${idiomaDestino}&sl=${idiomaOrigem}&tl=${idiomaDestino}&u=${encodeURIComponent(window.location.href)}`;
-  window.location.href = url;
+  const urlAtual = window.location.href;
+  const urlTraduzida = `https://translate.google.com/translate?hl=${idiomaDestino}&sl=pt&tl=${idiomaDestino}&u=${encodeURIComponent(urlAtual)}`;
+  window.open(urlTraduzida, "_blank");
 }
