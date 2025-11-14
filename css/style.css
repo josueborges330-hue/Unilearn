@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
+
+:root {
+  --azul: #1E3A8A;
+  --ciano: #06B6D4;
+  --branco: #FFFFFF;
+  --cinza: #F3F4F6;
+  --vidro: rgba(255, 255, 255, 0.6);
+  --sombra: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to bottom right, var(--cinza), var(--branco));
+  color: var(--azul);
+  min-height: 100vh;
+}
+
+/* Cabeçalho fixo */
+header {
+  background-color: var(--azul);
+  color: var(--branco);
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px var(--sombra);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--ciano);
+}
+
+nav a.ativo {
+  border-bottom: 2px solid var(--ciano);
+}
+
+/* Botão de modo escuro */
+.dark-toggle {
+  margin-left: 1rem;
+  background-color: var(--ciano);
+  color: var(--branco);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.dark-toggle:hover {
+  background-color: #0891b2;
+}
+
+/* Hero */
+.hero {
+  margin-top: 80px;
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--branco);
+  animation: fadeIn 1s ease-in;
+}
+
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card, .cards button {
+  background: var(--vidro);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 16px var(--sombra);
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.card:hover, .cards button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Botões de filtro */
+.filtro button {
+  background-color: var(--ciano);
+  color: var(--branco);
+  font-weight: bold;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.filtro button:hover {
+  background-color: #0891b2;
+}
+
+/* Painel de universidades */
+#painel-universidades h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#painel-universidades ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+#painel-universidades li {
+  background-color: var(--branco);
+  margin: 0.5rem auto;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--sombra);
+  max-width: 300px;
+}
+
+/* Chat */
+.chat-box {
+  background: var(--vidro);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 1rem;
+  width: 90%;
+  max-width: 600px;
+  height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px var(--sombra);
+}
+
+.chat-input {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 90%;
+  max-width: 600px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.chat-input button {
+  background-color: var(--ciano);
+  color: var(--branco);
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+  background-color: #0891b2;
+}
+
+.mensagem {
+  margin-bottom: 1rem;
+}
+
+.mensagem strong {
+  color: var(--azul);
+}
+
+.mensagem span {
+  font-size: 0.8rem;
+  color: #666;
+  margin-left: 0.5rem;
+}
+
+.mensagem p {
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* Linha do tempo */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+  background-color: var(--branco);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem auto;
+  max-width: 600px;
+  box-shadow: 0 4px 8px var(--sombra);
+}
+
+.timeline-item.ativo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--azul);
+  color: var(--branco);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-input {
+    flex-direction: column;
+  }
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🌙 Modo Escuro */
+body.dark-mode {
+  background: linear-gradient(to bottom right, #2a2a2a, #3a3a3a);
+  color: #e0e0e0;
+}
+
+body.dark-mode .card,
+body.dark-mode .chat-box,
+body.dark-mode .cards button {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* nav continua azul no modo escuro */
+body.dark-mode nav a {
+  color: #f0f0f0;
+}
+
+body.dark-mode nav a:hover {
+  color: var(--ciano);
+}
+
+body.dark-mode footer {
+  background-color: #111;
+  color: #f0f0f0;
+}
+
+body.dark-mode .chat-input input {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+body.dark-mode .chat-input button {
+  background-color: var(--ciano);
+}
+
+body.dark-mode .hero,
+body.dark-mode #painel-universidades li,
+body.dark-mode .timeline-item {
+  background-color: #2f2f2f;
+  color: #e0e0e0;
+}
+
+body.dark-mode .card p,
+body.dark-mode .hero p,
+body.dark-mode .mensagem p {
+  color: #ddd;
+}
+
+/* Balão de mensagem no modo escuro */
+body.dark-mode .mensagem {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 0.8rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  /* 🌐 Seletor de idioma discreto */
+.idioma-select {
+  background-color: transparent;
+  color: var(--branco);
+  border: 1px solid var(--branco);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.idioma-select option {
+  color: black;
+}
+
+/* Modo escuro para seletor */
+body.dark-mode .idioma-select {
+  color: #f0f0f0;
+  border-color: #f0f0f0;
+}
