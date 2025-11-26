@@ -6,36 +6,40 @@
   <title>Universidades - UniLearn</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/script.js" defer></script>
+
+  <!-- Leaflet CSS + JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
   <header>
     <nav>
-  <h2>UniLearn</h2>
-  <div>
-    <a href="index.html">Início</a>
-    <a href="universidades.html">Universidades</a>
-    <a href="aprendizagem.html">Aprendizagem</a>
-    <a href="comunidade.html">Comunidade</a>
-    <a href="sobre.html">Sobre</a>
-    <button id="modoToggle" onclick="toggleDarkMode()" class="dark-toggle">🌙 Modo Escuro</button>
-  </div>
-</nav>
-
+      <h2>UniLearn</h2>
+      <div>
+        <a href="index.html">Início</a>
+        <a href="universidades.html">Universidades</a>
+        <a href="aprendizagem.html">Aprendizagem</a>
+        <a href="comunidade.html">Comunidade</a>
+        <a href="sobre.html">Sobre</a>
+        <button id="modoToggle" onclick="toggleDarkMode()" class="dark-toggle">🌙 Modo Escuro</button>
+      </div>
+    </nav>
   </header>
 
   <section class="hero">
-    <h1>Universidades por Distrito</h1>
-    <p>Seleciona um distrito para ver as universidades disponíveis.</p>
+    <h1>Universidades em Portugal</h1>
+    <p>Explora no mapa as principais universidades e acede diretamente aos seus sites oficiais.</p>
   </section>
 
-  <section class="cards">
-    <button class="card" onclick="mostrarUniversidades('Lisboa')">Lisboa</button>
-    <button class="card" onclick="mostrarUniversidades('Porto')">Porto</button>
-    <button class="card" onclick="mostrarUniversidades('Coimbra')">Coimbra</button>
-  </section>
-
+  <!-- Painel de universidades (lista textual dinâmica) -->
   <section class="cards" id="painel-universidades">
-    <!-- Conteúdo dinâmico -->
+    <!-- Conteúdo dinâmico gerado pelo JS -->
+  </section>
+
+  <!-- Mapa -->
+  <section style="padding:2rem;">
+    <h2>Mapa das Universidades</h2>
+    <div id="map" style="height:500px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"></div>
   </section>
 
   <footer>
