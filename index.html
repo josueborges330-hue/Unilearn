@@ -3,23 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UniLearn</title>
+  <title>UniLearn - Início</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/script.js" defer></script>
 </head>
 <body>
   <header>
     <nav>
-      <h2 style="display: flex; align-items: center; gap: 0.5rem;">
-        UniLearn
-        <select class="idioma-select" onchange="traduzirPagina(this.value)">
-          <option value="">🌐</option>
-          <option value="en">EN</option>
-          <option value="es">ES</option>
-        </select>
-      </h2>
+      <h2>UniLearn</h2>
       <div>
-        <a href="index.html">Início</a>
+        <a href="index.html" class="ativo">Início</a>
         <a href="universidades.html">Universidades</a>
         <a href="aprendizagem.html">Aprendizagem</a>
         <a href="comunidade.html">Comunidade</a>
@@ -29,24 +22,37 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Conectando estudantes e universidades</h1>
-    <p>Descobre oportunidades académicas em Portugal com UniLearn.</p>
+ <!-- Hero -->
+<section class="hero" style="text-align:center; padding:3rem; color:#333;">
+  <h1>Bem-vindo ao UniLearn</h1>
+  <p>A tua plataforma para explorar universidades, bolsas e oportunidades académicas em Portugal.</p>
+  <a href="universidades.html" class="btn">Explorar Universidades</a>
+</section>
+
+
+  <!-- Destaques -->
+  <section class="cards" style="padding:2rem;">
+    <div class="card">
+      <h3>🎓 Universidades</h3>
+      <p>Mapa interativo com as principais universidades e cursos.</p>
+      <a href="universidades.html" class="btn">Ver mapa</a>
+    </div>
+    <div class="card">
+      <h3>💡 Aprendizagem</h3>
+      <p>Recursos e interesses estudantis para além da sala de aula.</p>
+      <a href="aprendizagem.html" class="btn">Explorar</a>
+    </div>
+    <div class="card">
+      <h3>🤝 Comunidade</h3>
+      <p>Conecta-te com outros estudantes e partilha experiências.</p>
+      <a href="comunidade.html" class="btn">Entrar</a>
+    </div>
   </section>
 
-  <section class="cards">
-    <div class="card">
-      <h3>Explora Universidades</h3>
-      <p>Descobre instituições por distrito e conhece os cursos disponíveis.</p>
-    </div>
-    <div class="card">
-      <h3>Recursos de Estudo</h3>
-      <p>Aprofunda os teus conhecimentos com materiais organizados por tema.</p>
-    </div>
-    <div class="card">
-      <h3>Comunidade Estudantil</h3>
-      <p>Partilha experiências e dúvidas com outros alunos.</p>
-    </div>
+  <!-- Impacto -->
+  <section style="text-align:center; padding:2rem;">
+    <h2>O impacto do UniLearn</h2>
+    <p>+50 universidades mapeadas • +1000 cursos listados • Estudantes de todo o país conectados</p>
   </section>
 
   <footer>
