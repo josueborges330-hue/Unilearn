@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Interesses - UniLearn</title>
+  <title>Aprendizagem - UniLearn</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/script.js" defer></script>
 </head>
@@ -14,7 +14,7 @@
       <div>
         <a href="index.html">Início</a>
         <a href="universidades.html">Universidades</a>
-        <a href="aprendizagem.html" class="ativo">Interesses</a>
+        <a href="aprendizagem.html" class="ativo">Aprendizagem</a>
         <a href="comunidade.html">Comunidade</a>
         <a href="sobre.html">Sobre</a>
         <button id="modoToggle" onclick="toggleDarkMode()" class="dark-toggle">🌙 Modo Escuro</button>
@@ -27,35 +27,47 @@
     <p>Explora oportunidades e temas que vão além da sala de aula e conectam estudantes de todo o país.</p>
   </section>
 
-  <section class="cards filtro">
-    <button onclick="filtrarInteresses('todos')">Todos</button>
-    <button onclick="filtrarInteresses('intercambio')">Intercâmbio</button>
-    <button onclick="filtrarInteresses('bolsas')">Bolsas</button>
-    <button onclick="filtrarInteresses('saude')">Saúde Mental</button>
-    <button onclick="filtrarInteresses('voluntariado')">Voluntariado</button>
-    <button onclick="filtrarInteresses('empreendedorismo')">Empreendedorismo</button>
+  <!-- Pesquisa rápida -->
+  <section class="search-bar" style="text-align:center; margin: 1rem;">
+    <input type="text" id="searchInput" placeholder="Pesquisar interesses..." onkeyup="pesquisarInteresses()" style="padding:0.5rem; width:80%; max-width:400px;">
   </section>
 
+  <!-- Filtros -->
+  <section class="cards filtro">
+    <button onclick="filtrarInteresses('todos')">Todos</button>
+    <button onclick="filtrarInteresses('intercambio')">🌍 Intercâmbio</button>
+    <button onclick="filtrarInteresses('bolsas')">🎓 Bolsas</button>
+    <button onclick="filtrarInteresses('saude')">💙 Saúde Mental</button>
+    <button onclick="filtrarInteresses('voluntariado')">🤝 Voluntariado</button>
+    <button onclick="filtrarInteresses('empreendedorismo')">🚀 Empreendedorismo</button>
+  </section>
+
+  <!-- Cards -->
   <section class="cards" id="interesses">
     <div class="card intercambio">
       <h3>Estudar fora com Erasmus</h3>
       <p>Descobre como te candidatar a programas de mobilidade internacional e viver novas experiências.</p>
+      <a href="https://erasmus-plus.ec.europa.eu/" target="_blank" class="btn">Saiba mais</a>
     </div>
     <div class="card bolsas">
       <h3>Bolsas de Estudo</h3>
       <p>Consulta os apoios disponíveis para estudantes em Portugal e como fazer a candidatura.</p>
+      <a href="https://www.dges.gov.pt/" target="_blank" class="btn">Saiba mais</a>
     </div>
     <div class="card saude">
       <h3>Saúde Mental</h3>
       <p>Recursos de apoio psicológico, apps úteis e grupos de suporte para estudantes.</p>
+      <a href="https://ipdj.gov.pt/saude-mental" target="_blank" class="btn">Saiba mais</a>
     </div>
     <div class="card voluntariado">
       <h3>Voluntariado Académico</h3>
       <p>Participa em projetos sociais e desenvolve competências enquanto contribuis para a comunidade.</p>
+      <a href="https://ipdj.gov.pt/voluntariado" target="_blank" class="btn">Saiba mais</a>
     </div>
     <div class="card empreendedorismo">
       <h3>Empreendedorismo Estudantil</h3>
       <p>Explora iniciativas, concursos e incubadoras para transformar ideias em projetos reais.</p>
+      <a href="https://startuplisboa.com/" target="_blank" class="btn">Saiba mais</a>
     </div>
   </section>
 
