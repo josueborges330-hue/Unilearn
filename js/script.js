@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
   // Ativa o link da página atual no menu
   const links = document.querySelectorAll("nav a");
   const currentPage = window.location.pathname.split("/").pop();
