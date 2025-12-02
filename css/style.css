@@ -86,6 +86,7 @@ nav a.ativo {
   font-family: 'Poppins', sans-serif;
   font-size: 2.8rem;
   margin-bottom: 1rem;
+  color: #333;
 }
 
 .hero p {
@@ -243,6 +244,44 @@ nav a.ativo {
   transform: translateY(0);
 }
 
+/* Favoritos */
+#favoritos {
+  padding: 2rem;
+  background-color: var(--cinza);
+  border-radius: 12px;
+  margin: 2rem;
+}
+
+#favoritos h2 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+}
+
+#listaFavoritos li {
+  background: var(--branco);
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--sombra);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#listaFavoritos button {
+  background-color: var(--ciano);
+  color: var(--branco);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#listaFavoritos button:hover {
+  background-color: #0891b2;
+}
+
 /* Rodapé */
 footer {
   background-color: var(--azul);
@@ -283,7 +322,6 @@ body.dark-mode .cards button {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* nav continua azul no modo escuro */
 body.dark-mode nav a {
   color: #f0f0f0;
 }
@@ -296,7 +334,6 @@ body.dark-mode footer {
   background-color: #111;
   color: #f0f0f0;
 }
-
 body.dark-mode .chat-input input {
   background-color: #333;
   color: #f0f0f0;
@@ -314,8 +351,13 @@ body.dark-mode .timeline-item {
   color: #e0e0e0;
 }
 
+/* Hero texto no modo escuro */
+body.dark-mode .hero h1,
+body.dark-mode .hero p {
+  color: #fff;
+}
+
 body.dark-mode .card p,
-body.dark-mode .hero p,
 body.dark-mode .mensagem p {
   color: #ddd;
 }
@@ -326,8 +368,9 @@ body.dark-mode .mensagem {
   padding: 0.8rem;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  }
-  /* 🌐 Seletor de idioma discreto */
+}
+
+/* 🌐 Seletor de idioma */
 .idioma-select {
   background-color: transparent;
   color: var(--branco);
@@ -347,3 +390,24 @@ body.dark-mode .idioma-select {
   color: #f0f0f0;
   border-color: #f0f0f0;
 }
+.painel-universidades {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.lista-universidades {
+  flex: 1;
+  max-width: 300px;
+}
+
+.mapa-universidades {
+  flex: 2;
+}
+
+#map {
+  height: 500px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
